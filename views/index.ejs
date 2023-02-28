@@ -24,6 +24,7 @@
                         <th>ID</th>
                         <th>Pais</th>
                         <th>Capital</th>
+                        <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +38,10 @@
                             </td>
                             <td>
                                 <%= pais.capital %>
+                            </td>
+                            <td>
+                                <a class="btn btn-info" href="/edit/<%= pais.id %>" role="button">Editar</a>
+                                <a class="btn btn-danger" href="/" role="button">Eliminar</a>
                             </td>
                         </tr>
                         <% }); %>

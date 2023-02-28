@@ -19,8 +19,11 @@ router.get("/", (req,res)=>{
     })
 })
 
-router.get("/about", (req,res)=>{
-    res.send("Bienvenidos a la seccion About");
+router.get("/create", (req,res)=>{
+   res.render("create")
 })
+
+const crud = require("./controllers/crud")
+router.post("/save", crud.save)
 
 module.exports = router;
